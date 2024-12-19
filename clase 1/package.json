@@ -1,0 +1,19 @@
+{
+  "name": "clase-1",
+  "version": "1.0.0",
+  "description": "Repositorio de repaso node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "standard": "^17.1.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "picocolors": "^1.1.1"
+  }
+}

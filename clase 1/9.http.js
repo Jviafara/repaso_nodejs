@@ -1,5 +1,4 @@
 const http = require('node:http')
-const dotenv = require('dotenv').config()
 const { findAvailablePort } = require('./10.free-port')
 
 const desiredPort = process.env.PORT || 3000

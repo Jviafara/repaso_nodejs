@@ -9,10 +9,8 @@ const server = http.createServer((req, res) => {
   res.end('Hello World')
 })
 
-findAvailablePort(desiredPort).then(port => {
+findAvailablePort(desiredPort).then((port) => {
   server.listen(port, () => {
-    console.log(
-    `Server is running on port http://localhost:${port}`
-    )
+    console.log(`Server is running on port http://localhost:${port}`)
   })
 })

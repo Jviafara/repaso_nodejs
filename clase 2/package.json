@@ -4,7 +4,8 @@
   "main": "1.http.js",
   "scripts": {
     "dev": "nodemon 1.http.js",
-    "dev2": "nodemon 2.routing.js"
+    "dev2": "nodemon 2.routing.js",
+    "dev3": "node --watch 3.express.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +15,7 @@
     "standard": "^17.1.2"
   },
   "dependencies": {
-    "clase-2": "file:"
+    "clase-2": "file:",
+    "express": "4.21.2"
   }
 }

@@ -1,12 +1,22 @@
-const express = require('express')
+import cors from 'cors'
+import express, { json } from 'express'
+import { randomUUID } from 'node:crypto'
+import { validateMovie, validatepartialMovie } from './schemas/movies.js'
+
+// import movies from './movies.json' assert { type: 'json' } //Esta sintaxis ya esta deprecada
+// import movies from './movies.json' with { type: 'json' } //Esta es la nueva sintaxis pero aun no esta soportada por nodejs
+//Leer JSON en ESModules
+// import fs from 'node:fs'
+// const movies = JSON.parse(fs.readFileSync('./movies.json', 'utf-8'))
+
+//Recomended way to read JSON files in nodejs at the moment
+import { createRequire } from 'node:module'
+const require = createRequire(import.meta.url)
 const movies = require('./movies.json')
-const crypto = require('node:crypto')
-const cors = require('cors')
-const { validateMovie, validatepartialMovie } = require('./schemas/movies')
 
 const app = express()
 app.disable('x-powered-by')
-app.use(express.json())
+app.use(json())
 
 app.use(
   cors({
@@ -50,7 +60,7 @@ app.post('/movies', (req, res) => {
     return res.status(400).json({ message: result.error.message })
 
   const newMovie = {
-    id: crypto.randomUUID(),
+    id: randomUUID(),
     ...result.data
   }
 

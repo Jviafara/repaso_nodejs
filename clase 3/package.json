@@ -10,7 +10,9 @@
   "description": "",
   "dependencies": {
     "clase-3": "file:",
+    "cors": "2.8.5",
     "express": "4.21.2",
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "zod": "3.24.1"
   }
 }

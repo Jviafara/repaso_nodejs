@@ -1,0 +1,31 @@
+###Fetch all movies
+GET http://localhost:8080/movies
+
+###Fetch movie by id
+GET http://localhost:8080/movies/5ad1a235-0d9c-410a-b32b-220d91689a08
+
+### Fetch all movies by genre
+GET http://localhost:8080/movies?genre=ACtiON
+
+### Create a new movie
+POST http://localhost:8080/movies
+Content-Type: application/json
+
+{
+   "title": "The Godfather",
+   "year": 1972,
+   "director": "Francis Ford Coppola",
+   "duration" : 175,
+   "poster": "https://img.fruugo.com/product/4/49/14441494_max.jpg",
+   "genre": ["Drama","Crime"]
+}
+
+### Update a movie
+PATCH http://localhost:8080/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+   "title": "The Shawshank Redemption return",
+   "duration": 220,
+   "year":2020
+}

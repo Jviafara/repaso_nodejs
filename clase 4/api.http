@@ -5,7 +5,8 @@ GET http://localhost:8080/movies
 GET http://localhost:8080/movies/5ad1a235-0d9c-410a-b32b-220d91689a08
 
 ### Fetch all movies by genre
-GET http://localhost:8080/movies?genre=ACtiON
+GET http://localhost:8080/movies?genre=drama
+
 
 ### Create a new movie
 POST http://localhost:8080/movies
